@@ -8,7 +8,7 @@ import (
 	"math"
 )
 
-func Init(map[string]any) error {
+func Init(args string) error {
 	return nil
 }
 
