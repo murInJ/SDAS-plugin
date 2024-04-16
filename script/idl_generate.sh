@@ -1,0 +1,1 @@
+kitex -module "github.com/murInJ/SDAS-plugin"  IDL/struct.thrift
