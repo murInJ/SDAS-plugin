@@ -1,0 +1,1 @@
+go build -gcflags="all=-N -l" --buildmode=plugin -o ./plugins/VideoWall.so ./VideoWall/plugin_VideoWall.go
