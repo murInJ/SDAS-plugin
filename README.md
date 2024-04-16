@@ -1,4 +1,8 @@
 # SDAS-plugin
+[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/murInJ/SDAS-plugin.svg)](https://github.com/murInJ/go-pic-bed)
+![GitHub Release](https://img.shields.io/github/v/release/murInJ/SDAS-plugin)
+[![GitHub contributors](https://img.shields.io/github/contributors/MurInJ/SDAS-plugin.svg)](https://GitHub.com/MurInJ/SDAS-plugin/graphs/contributors/)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/murInJ/SDAS-plugin/go.yml)
 plugin hub of [SDAS](https://github.com/murInJ/Streaming-Data-Aggregation-Source-Service)
 
 Notice:
