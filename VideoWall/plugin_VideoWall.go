@@ -8,8 +8,8 @@ import (
 	"math"
 )
 
-func Init() {
-
+func Init(map[string]any) error {
+	return nil
 }
 
 // EntryName: any

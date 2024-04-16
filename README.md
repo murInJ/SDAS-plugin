@@ -7,7 +7,7 @@ Notice:
 
 请将接口函数命名为`Pipeline(entry map[string]*api.SourceMsg) (map[string]*api.SourceMsg,error)`
 
-同时留有`Init`函数
+同时留有`Init(map[string]any) error`函数
 
 plugin list:
 - Video Wall
