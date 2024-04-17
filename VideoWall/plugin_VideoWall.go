@@ -2,9 +2,10 @@ package main
 
 import (
 	"github.com/vmihailenco/msgpack/v5"
+	"golang.org/x/image/draw"
 	"image"
-	"image/draw"
 	"math"
+	"sort"
 )
 
 func Init(args string) error {
@@ -22,12 +23,17 @@ func Pipeline(entry map[string]map[string]any) (map[string]map[string]any, error
 	width := 0
 	index := 0
 	var resultImage *image.RGBA
-	for _, msg := range entry {
+	keys := make([]string, 0)
+	for insource, _ := range entry {
+		keys = append(keys, insource)
+	}
+	sort.Strings(keys)
+	for _, insource := range keys {
+		msg := entry[insource]
 		var img image.RGBA
 		err := msgpack.Unmarshal(msg["Data"].([]byte), &img)
 
 		if err != nil {
-
 			return nil, err
 		}
 
@@ -46,7 +52,6 @@ func Pipeline(entry map[string]map[string]any) (map[string]map[string]any, error
 	}
 	bin, err := msgpack.Marshal(resultImage)
 	if err != nil {
-
 		return nil, err
 	}
 	res["Exist"]["Data"] = bin
